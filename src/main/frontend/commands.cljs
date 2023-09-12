@@ -234,10 +234,12 @@
                        :backward-pos 6}]] "Create a underline text decoration"])
      ["Template" [[:editor/input command-trigger nil]
                   [:editor/search-template]] "Insert a created template here"]
-     (cond
-       (and (util/electron?) (config/local-db? (state/get-current-repo)))
+     ;;(cond
+     ;;  (and (util/electron?) (config/local-db? (state/get-current-repo)))
 
-       ["Upload an asset" [[:editor/click-hidden-file-input :id]] "Upload file types like image, pdf, docx, etc.)"])]
+       ["Upload an asset" [[:editor/click-hidden-file-input :id]] "Upload file types like image, pdf, docx, etc.)"]
+     ;;)
+    ]
 
        ;; ["Upload an image" [[:editor/click-hidden-file-input :id]]]
 
